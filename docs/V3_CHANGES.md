@@ -8,7 +8,7 @@ Update this file whenever you complete a V3 task, merge a PR, or finish an AI-as
 | **Branch** | `refactor/v3-security` (from `develop_oss_v3.0`) |
 | **Approach** | V3.0 — human review + AI/IDE assistance |
 | **Last updated** | 2026-05-17 |
-| **Related docs** | [V3_PHASE0.md](./V3_PHASE0.md) · [PHP_INVENTORY.md](./PHP_INVENTORY.md) · [OWNER_DEPRECATION.md](./OWNER_DEPRECATION.md) · [refactor_backlog.json](./refactor_backlog.json) |
+| **Related docs** | [V3_PHASE0.md](./V3_PHASE0.md) · [V3_PHASE3_VALIDATION.md](./V3_PHASE3_VALIDATION.md) · [V3_PHASE4_SIGNOFF.md](./V3_PHASE4_SIGNOFF.md) · [RELEASE_V4.md](./RELEASE_V4.md) · [MIGRATION_V4.md](./MIGRATION_V4.md) · [refactor_backlog.json](./refactor_backlog.json) |
 
 ---
 
@@ -30,12 +30,17 @@ Update this file whenever you complete a V3 task, merge a PR, or finish an AI-as
 | **1b** | `Admin/` → `config.php` + prepared statements (input SQL) | Done |
 | **2a** | Shared login CSS (`assets/css/login.css`) | Done |
 | **2b** | Deprecate `Owner/` (301 redirects) | Done |
+| **3** | Mechanical validation (syntax, PHPStan, SQL scan) | Done (tooling) |
+| **4** | Human spot-check sign-off checklist | Done (template) |
+| **5** | Release v4.0.0 (changelog, migration, tag guide) | Done (artifacts) |
 | **1c** | `Employee/` → `config.php` + security | Pending |
 | **1d** | `Tenant/` + shared root PHP → `config.php` | Pending |
-| **3** | UI / path fixes, dashboard content, CSS dedupe | Pending |
-| **4** | Database normalization | Pending |
+| **UI** | Dashboard content, CSS dedupe (V3 plan) | Pending |
+| **DB** | Database normalization | Pending |
 
 **Backlog items (auto-generated):** ~120 — run `php scripts/generate_refactor_backlog.php` for current count.
+
+**Phase 3 last run:** syntax PASS (64 files) · PHPStan skipped (run `composer install`) · SQL scan **57 findings** (mostly Employee/Tenant) — see `docs/validation/phase3-summary.json`
 
 ---
 
@@ -164,6 +169,62 @@ php scripts/generate_refactor_backlog.php
 
 ---
 
+### 2026-05-17 — Phase 3: Mechanical validation (automated)
+
+**Goal:** Repeatable syntax, static analysis, and SQL security checks.
+
+| Deliverable | Location |
+|-------------|----------|
+| Syntax checker | `scripts/validate-php-syntax.sh` |
+| PHPStan runner (levels 2→5) | `scripts/run-phpstan.sh`, `phpstan.neon.dist`, `composer.json` |
+| SQL interpolation scan | `scripts/security-scan-sql.php` |
+| Combined runner | `scripts/run-phase3-validation.sh` |
+| Docs | `docs/V3_PHASE3_VALIDATION.md` |
+| Reports | `docs/validation/*` |
+
+```bash
+bash scripts/run-phase3-validation.sh
+composer install && PHPSTAN_LEVEL=2 bash scripts/run-phpstan.sh
+```
+
+**First run (2026-05-17):** 64 PHP files, 0 syntax errors; 57 SQL scan findings (expected until Employee/Tenant refactor).
+
+---
+
+### 2026-05-17 — Phase 4: Human spot-check (template)
+
+**Goal:** 10–20 item manual checklist before release.
+
+| Deliverable | Location |
+|-------------|----------|
+| Sign-off checklist (auth, fees, delete, email, staging DB) | `docs/V3_PHASE4_SIGNOFF.md` |
+
+**Action required:** Tester fills Pass/Fail and signs approval before `git tag v4.0.0`.
+
+---
+
+### 2026-05-17 — Phase 5: Release artifacts
+
+**Goal:** Changelog, migration guide, and tag instructions for **v4.0.0**.
+
+| Deliverable | Location |
+|-------------|----------|
+| Changelog (generated) | `CHANGELOG.md` |
+| Changelog builder | `scripts/prepare-release.php` |
+| Migration guide for forks | `docs/MIGRATION_V4.md` |
+| Release & tag steps | `docs/RELEASE_V4.md` |
+| `.gitignore` | `vendor/`, `composer.lock` |
+
+```bash
+php scripts/prepare-release.php
+# After Phase 4 sign-off:
+# git tag -a v4.0.0 -m "v4.0.0: ..."
+```
+
+**Note:** Tag is **not** created automatically — run commands in `docs/RELEASE_V4.md` after sign-off.
+
+---
+
 ## Completed
 
 - [x] Phase 0 planning docs and AI rules  
@@ -174,6 +235,9 @@ php scripts/generate_refactor_backlog.php
 - [x] **Admin/** `statistics.php` table name fix  
 - [x] Shared **login CSS** + `login.html` path casing  
 - [x] **Owner/** deprecated via redirects + mapping doc  
+- [x] **Phase 3** validation scripts + docs + initial reports  
+- [x] **Phase 4** sign-off checklist template  
+- [x] **Phase 5** `CHANGELOG.md`, migration guide, release doc, `prepare-release.php`  
 
 ---
 
@@ -185,9 +249,11 @@ php scripts/generate_refactor_backlog.php
 - [ ] Password hashing (`password_hash` / `password_verify`) + DB migration  
 - [ ] Session guards on protected dashboards  
 - [ ] `htmlspecialchars` on remaining echo loops (Admin tables, etc.)  
-- [ ] Phase 3 UI: dashboard main sections, dedupe `Admin/style.css` vs `Employee/style.css`  
-- [ ] Phase 4: DB normalization (`complaint` vs `complaints`, etc.)  
-- [ ] Manual baseline checklist (§3.3 in `V3_PHASE0.md`) — record Pass/Fail  
+- [ ] **UI phase:** dashboard main sections, dedupe `Admin/style.css` vs `Employee/style.css`  
+- [ ] **DB phase:** normalization (`complaint` vs `complaints`, etc.)  
+- [ ] **Phase 4 sign-off** — complete `docs/V3_PHASE4_SIGNOFF.md` manually  
+- [ ] **Phase 3 green** — SQL scan 0 critical after Employee/Tenant refactor; PHPStan with `composer install`  
+- [ ] **git tag `v4.0.0`** — after sign-off ([RELEASE_V4.md](./RELEASE_V4.md))  
 
 ---
 
@@ -205,6 +271,16 @@ scripts/
   generate_refactor_backlog.php
   refactor_admin_config.php
   strip_login_inline_css.php
+  validate-php-syntax.sh
+  run-phpstan.sh
+  security-scan-sql.php
+  run-phase3-validation.sh
+  prepare-release.php
+
+docs/validation/       # Generated reports (phase3-summary.json, etc.)
+composer.json
+phpstan.neon.dist
+CHANGELOG.md
 
 assets/css/
   login.css

@@ -1,0 +1,2 @@
+PHPStan not installed (skipped).
+Install: composer install --working-dir=/Users/raveen/Documents/GitHub/DBMS-Apartment-Management-System-Project

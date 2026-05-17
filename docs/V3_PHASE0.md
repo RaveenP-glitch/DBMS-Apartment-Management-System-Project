@@ -179,3 +179,5 @@ Canonical copy for Cursor: [.cursor/rules/v3-refactor-php.mdc](../.cursor/rules/
 - [x] AI rules (§5 + `.cursor/rules/v3-refactor-php.mdc`)
 
 **Next step:** Check out `refactor/v3-security` and begin **Phase 1** (config.php everywhere, then prepared statements on auth flows).
+
+**Later phases (done as tooling/docs):** [V3_PHASE3_VALIDATION.md](./V3_PHASE3_VALIDATION.md) · [V3_PHASE4_SIGNOFF.md](./V3_PHASE4_SIGNOFF.md) · [RELEASE_V4.md](./RELEASE_V4.md) — tracked in [V3_CHANGES.md](./V3_CHANGES.md).

@@ -1,0 +1,8 @@
+{
+  "generated_at": "2026-05-17T09:54:32Z",
+  "syntax": { "exit_code": 0, "report": "docs/validation/syntax-report.txt" },
+  "phpstan": { "exit_code": 0, "level": 2, "report": "docs/validation/phpstan-report.txt" },
+  "security_sql": { "exit_code": 1, "report": "docs/validation/security-sql-report.json" },
+  "grep_fallback_hits": 0,
+  "overall_pass": false
+}

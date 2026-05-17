@@ -1,0 +1,23 @@
+{
+    "name": "radom12/apartment-management-system",
+    "description": "Apartment Management System — PHP/MySQL",
+    "type": "project",
+    "license": "Apache-2.0",
+    "require": {
+        "php": ">=8.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.0"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    },
+    "scripts": {
+        "validate": "bash scripts/run-phase3-validation.sh",
+        "phpstan": "phpstan analyse --memory-limit=512M",
+        "phpstan:baseline": "phpstan analyse --memory-limit=512M --generate-baseline=phpstan-baseline.neon"
+    }
+}

@@ -23,6 +23,19 @@ Phase 0 planning (scope, baseline checklist, PHP inventory, AI rules) lives in [
 - Shared login styles: [`assets/css/login.css`](assets/css/login.css)
 - **Owner/** deprecated — redirects documented in [`docs/OWNER_DEPRECATION.md`](docs/OWNER_DEPRECATION.md)
 
+### Validation & release (phases 3–5)
+
+```bash
+bash scripts/run-phase3-validation.sh          # syntax + PHPStan + SQL scan
+php scripts/prepare-release.php                # regenerate CHANGELOG.md
+```
+
+| Phase | Doc |
+|-------|-----|
+| 3 — Automated validation | [`docs/V3_PHASE3_VALIDATION.md`](docs/V3_PHASE3_VALIDATION.md) |
+| 4 — Manual sign-off | [`docs/V3_PHASE4_SIGNOFF.md`](docs/V3_PHASE4_SIGNOFF.md) |
+| 5 — Release v4.0.0 | [`docs/RELEASE_V4.md`](docs/RELEASE_V4.md) · [`docs/MIGRATION_V4.md`](docs/MIGRATION_V4.md) · [`CHANGELOG.md`](CHANGELOG.md) |
+
 ## Installation
 
 1. Clone the repository: `https://github.com/Radom12/DBMS-Apartment-Management-System-Project`

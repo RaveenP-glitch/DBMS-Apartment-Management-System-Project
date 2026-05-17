@@ -1,0 +1,20 @@
+# PHPStan — start at level 2, raise toward 5 as fixes land.
+# Run: composer install && vendor/bin/phpstan analyse -c phpstan.neon.dist
+# Or:  PHPSTAN_LEVEL=3 bash scripts/run-phpstan.sh
+
+includes:
+    - phpstan-baseline.neon
+
+parameters:
+    level: 2
+    paths:
+        - Admin
+        - Employee
+        - Tenant
+        - Owner
+        - config.php
+        - enquire.php
+        - terminate.php
+    excludePaths:
+        - scripts/*
+    reportUnmatchedIgnoredErrors: false

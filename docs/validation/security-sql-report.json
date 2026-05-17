@@ -1,0 +1,463 @@
+{
+    "generated_at": "2026-05-17T09:54:32+00:00",
+    "total_findings": 57,
+    "critical": 27,
+    "findings": [
+        {
+            "file": "Admin/manage_data.php",
+            "line": 91,
+            "type": "sql_string_concat",
+            "snippet": "echo \"<li>\" . $row[\"first_name\"] .\" \" . $row[\"last_name\"]. \"-\" . $row[\"email\"] . \" - <a href='delete.php?type=employee&id=\" . $row[\"employee_id\"] . \"'>Delete</a></li>\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "high"
+        },
+        {
+            "file": "Admin/manage_data.php",
+            "line": 91,
+            "type": "sql_var_inside_quotes",
+            "snippet": "echo \"<li>\" . $row[\"first_name\"] .\" \" . $row[\"last_name\"]. \"-\" . $row[\"email\"] . \" - <a href='delete.php?type=employee&id=\" . $row[\"employee_id\"] . \"'>Delete</a></li>\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "high"
+        },
+        {
+            "file": "Admin/manage_data.php",
+            "line": 91,
+            "type": "sql_quote_interpolation",
+            "snippet": "echo \"<li>\" . $row[\"first_name\"] .\" \" . $row[\"last_name\"]. \"-\" . $row[\"email\"] . \" - <a href='delete.php?type=employee&id=\" . $row[\"employee_id\"] . \"'>Delete</a></li>\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "critical"
+        },
+        {
+            "file": "Admin/manage_data.php",
+            "line": 104,
+            "type": "sql_string_concat",
+            "snippet": "echo \"<li>\" . $row[\"first_name\"] . \" \" . $row[\"last_name\"] . \" - \" . $row[\"email\"] . \" - <a href='delete.php?type=tenant&id=\" . $row[\"tenant_id\"] . \"'>Delete</a></li>\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "high"
+        },
+        {
+            "file": "Admin/manage_data.php",
+            "line": 104,
+            "type": "sql_var_inside_quotes",
+            "snippet": "echo \"<li>\" . $row[\"first_name\"] . \" \" . $row[\"last_name\"] . \" - \" . $row[\"email\"] . \" - <a href='delete.php?type=tenant&id=\" . $row[\"tenant_id\"] . \"'>Delete</a></li>\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "high"
+        },
+        {
+            "file": "Admin/manage_data.php",
+            "line": 104,
+            "type": "sql_quote_interpolation",
+            "snippet": "echo \"<li>\" . $row[\"first_name\"] . \" \" . $row[\"last_name\"] . \" - \" . $row[\"email\"] . \" - <a href='delete.php?type=tenant&id=\" . $row[\"tenant_id\"] . \"'>Delete</a></li>\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "critical"
+        },
+        {
+            "file": "Employee/approve_request.php",
+            "line": 66,
+            "type": "sql_var_inside_quotes",
+            "snippet": "$update_query = \"UPDATE service_requests SET status = 'Approved' WHERE request_id = $request_id\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "high"
+        },
+        {
+            "file": "Employee/approve_request.php",
+            "line": 66,
+            "type": "sql_quote_interpolation",
+            "snippet": "$update_query = \"UPDATE service_requests SET status = 'Approved' WHERE request_id = $request_id\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "critical"
+        },
+        {
+            "file": "Employee/edit_tenant.php",
+            "line": 64,
+            "type": "sql_var_inside_quotes",
+            "snippet": "$update_query = \"UPDATE tenant SET first_name = '$first_name', last_name = '$last_name', email = '$email', phone_number = '$phone_number', age = '$age', dob = '$dob' WHERE tenant_id = $tenant_id\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "high"
+        },
+        {
+            "file": "Employee/edit_tenant.php",
+            "line": 64,
+            "type": "sql_quote_interpolation",
+            "snippet": "$update_query = \"UPDATE tenant SET first_name = '$first_name', last_name = '$last_name', email = '$email', phone_number = '$phone_number', age = '$age', dob = '$dob' WHERE tenant_id = $tenant_id\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "critical"
+        },
+        {
+            "file": "Employee/terminate.php",
+            "line": 36,
+            "type": "sql_var_inside_quotes",
+            "snippet": "$query = \"SELECT * FROM admin WHERE username='$username' AND password='$password'\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "high"
+        },
+        {
+            "file": "Employee/terminate.php",
+            "line": 36,
+            "type": "sql_quote_interpolation",
+            "snippet": "$query = \"SELECT * FROM admin WHERE username='$username' AND password='$password'\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "critical"
+        },
+        {
+            "file": "Employee/terminate.php",
+            "line": 39,
+            "type": "sql_var_inside_quotes",
+            "snippet": "$query = \"SELECT * FROM owner WHERE username='$username' AND password='$password'\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "high"
+        },
+        {
+            "file": "Employee/terminate.php",
+            "line": 39,
+            "type": "sql_quote_interpolation",
+            "snippet": "$query = \"SELECT * FROM owner WHERE username='$username' AND password='$password'\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "critical"
+        },
+        {
+            "file": "Employee/terminate.php",
+            "line": 42,
+            "type": "sql_var_inside_quotes",
+            "snippet": "$query = \"SELECT * FROM tenant WHERE username='$username' AND password='$password'\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "high"
+        },
+        {
+            "file": "Employee/terminate.php",
+            "line": 42,
+            "type": "sql_quote_interpolation",
+            "snippet": "$query = \"SELECT * FROM tenant WHERE username='$username' AND password='$password'\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "critical"
+        },
+        {
+            "file": "Employee/terminate.php",
+            "line": 45,
+            "type": "sql_var_inside_quotes",
+            "snippet": "$query = \"SELECT * FROM employee WHERE username='$username' AND password='$password'\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "high"
+        },
+        {
+            "file": "Employee/terminate.php",
+            "line": 45,
+            "type": "sql_quote_interpolation",
+            "snippet": "$query = \"SELECT * FROM employee WHERE username='$username' AND password='$password'\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "critical"
+        },
+        {
+            "file": "Employee/viewrequest.php",
+            "line": 71,
+            "type": "sql_var_inside_quotes",
+            "snippet": "$cost_query = \"SELECT cost FROM services WHERE service_name = '$service_name'\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "high"
+        },
+        {
+            "file": "Employee/viewrequest.php",
+            "line": 71,
+            "type": "sql_quote_interpolation",
+            "snippet": "$cost_query = \"SELECT cost FROM services WHERE service_name = '$service_name'\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "critical"
+        },
+        {
+            "file": "Employee/viewrequest.php",
+            "line": 94,
+            "type": "sql_var_inside_quotes",
+            "snippet": "$update_query = \"UPDATE service_requests SET status = 'Approved' WHERE request_id = $request_id\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "high"
+        },
+        {
+            "file": "Employee/viewrequest.php",
+            "line": 94,
+            "type": "sql_quote_interpolation",
+            "snippet": "$update_query = \"UPDATE service_requests SET status = 'Approved' WHERE request_id = $request_id\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "critical"
+        },
+        {
+            "file": "Employee/viewtenant.php",
+            "line": 166,
+            "type": "sql_string_concat",
+            "snippet": "echo \"<button class='delete-button' onclick='deleteTenant(\" . $row[\"tenant_id\"] . \")'>Delete</button>\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "high"
+        },
+        {
+            "file": "Employee/viewtenant.php",
+            "line": 166,
+            "type": "sql_var_inside_quotes",
+            "snippet": "echo \"<button class='delete-button' onclick='deleteTenant(\" . $row[\"tenant_id\"] . \")'>Delete</button>\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "high"
+        },
+        {
+            "file": "Employee/viewtenant.php",
+            "line": 166,
+            "type": "sql_quote_interpolation",
+            "snippet": "echo \"<button class='delete-button' onclick='deleteTenant(\" . $row[\"tenant_id\"] . \")'>Delete</button>\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "critical"
+        },
+        {
+            "file": "Employee/viewtenant.php",
+            "line": 167,
+            "type": "sql_var_inside_quotes",
+            "snippet": "echo \"<button class='delete-button' onclick='editTenant(\" . $row[\"tenant_id\"] . \")'>Edit</button>\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "high"
+        },
+        {
+            "file": "Employee/viewtenant.php",
+            "line": 167,
+            "type": "sql_quote_interpolation",
+            "snippet": "echo \"<button class='delete-button' onclick='editTenant(\" . $row[\"tenant_id\"] . \")'>Edit</button>\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "critical"
+        },
+        {
+            "file": "Tenant/process_signup.php",
+            "line": 41,
+            "type": "sql_var_inside_quotes",
+            "snippet": "$owner_query = \"SELECT owner_id FROM owner WHERE CONCAT(first_name, ' ', last_name) = '$owner_name'\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "high"
+        },
+        {
+            "file": "Tenant/process_signup.php",
+            "line": 41,
+            "type": "sql_quote_interpolation",
+            "snippet": "$owner_query = \"SELECT owner_id FROM owner WHERE CONCAT(first_name, ' ', last_name) = '$owner_name'\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "critical"
+        },
+        {
+            "file": "Tenant/process_signup.php",
+            "line": 58,
+            "type": "sql_var_inside_quotes",
+            "snippet": "echo \"Error: \" . $insert_query . \"<br>\" . $conn->error;",
+            "uses_prepare_elsewhere": false,
+            "priority": "high"
+        },
+        {
+            "file": "Tenant/process_signup.php",
+            "line": 58,
+            "type": "sql_quote_interpolation",
+            "snippet": "echo \"Error: \" . $insert_query . \"<br>\" . $conn->error;",
+            "uses_prepare_elsewhere": false,
+            "priority": "critical"
+        },
+        {
+            "file": "Tenant/requestservice.php",
+            "line": 24,
+            "type": "sql_var_inside_quotes",
+            "snippet": "$insert_query = \"INSERT INTO service_requests (tenant_id, service_id, requested_time) VALUES ('$tenant_id', '$service_id', '$time')\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "high"
+        },
+        {
+            "file": "Tenant/requestservice.php",
+            "line": 24,
+            "type": "sql_quote_interpolation",
+            "snippet": "$insert_query = \"INSERT INTO service_requests (tenant_id, service_id, requested_time) VALUES ('$tenant_id', '$service_id', '$time')\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "critical"
+        },
+        {
+            "file": "Tenant/requestservice.php",
+            "line": 31,
+            "type": "sql_var_inside_quotes",
+            "snippet": "echo \"Error: \" . $insert_query . \"<br>\" . $conn->error;",
+            "uses_prepare_elsewhere": false,
+            "priority": "high"
+        },
+        {
+            "file": "Tenant/requestservice.php",
+            "line": 31,
+            "type": "sql_quote_interpolation",
+            "snippet": "echo \"Error: \" . $insert_query . \"<br>\" . $conn->error;",
+            "uses_prepare_elsewhere": false,
+            "priority": "critical"
+        },
+        {
+            "file": "Tenant/submit_request.php",
+            "line": 24,
+            "type": "sql_var_inside_quotes",
+            "snippet": "$insert_query = \"INSERT INTO service_requests (tenant_id, service_id, requested_time) VALUES ('$tenant_id', '$service_id', '$time')\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "high"
+        },
+        {
+            "file": "Tenant/submit_request.php",
+            "line": 24,
+            "type": "sql_quote_interpolation",
+            "snippet": "$insert_query = \"INSERT INTO service_requests (tenant_id, service_id, requested_time) VALUES ('$tenant_id', '$service_id', '$time')\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "critical"
+        },
+        {
+            "file": "Tenant/submit_request.php",
+            "line": 31,
+            "type": "sql_var_inside_quotes",
+            "snippet": "echo \"Error: \" . $insert_query . \"<br>\" . $conn->error;",
+            "uses_prepare_elsewhere": false,
+            "priority": "high"
+        },
+        {
+            "file": "Tenant/submit_request.php",
+            "line": 31,
+            "type": "sql_quote_interpolation",
+            "snippet": "echo \"Error: \" . $insert_query . \"<br>\" . $conn->error;",
+            "uses_prepare_elsewhere": false,
+            "priority": "critical"
+        },
+        {
+            "file": "Tenant/terminate.php",
+            "line": 36,
+            "type": "sql_var_inside_quotes",
+            "snippet": "$query = \"SELECT * FROM admin WHERE username='$username' AND password='$password'\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "high"
+        },
+        {
+            "file": "Tenant/terminate.php",
+            "line": 36,
+            "type": "sql_quote_interpolation",
+            "snippet": "$query = \"SELECT * FROM admin WHERE username='$username' AND password='$password'\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "critical"
+        },
+        {
+            "file": "Tenant/terminate.php",
+            "line": 39,
+            "type": "sql_var_inside_quotes",
+            "snippet": "$query = \"SELECT * FROM owner WHERE username='$username' AND password='$password'\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "high"
+        },
+        {
+            "file": "Tenant/terminate.php",
+            "line": 39,
+            "type": "sql_quote_interpolation",
+            "snippet": "$query = \"SELECT * FROM owner WHERE username='$username' AND password='$password'\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "critical"
+        },
+        {
+            "file": "Tenant/terminate.php",
+            "line": 42,
+            "type": "sql_var_inside_quotes",
+            "snippet": "$query = \"SELECT * FROM tenant WHERE username='$username' AND password='$password'\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "high"
+        },
+        {
+            "file": "Tenant/terminate.php",
+            "line": 42,
+            "type": "sql_quote_interpolation",
+            "snippet": "$query = \"SELECT * FROM tenant WHERE username='$username' AND password='$password'\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "critical"
+        },
+        {
+            "file": "Tenant/terminate.php",
+            "line": 45,
+            "type": "sql_var_inside_quotes",
+            "snippet": "$query = \"SELECT * FROM employee WHERE username='$username' AND password='$password'\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "high"
+        },
+        {
+            "file": "Tenant/terminate.php",
+            "line": 45,
+            "type": "sql_quote_interpolation",
+            "snippet": "$query = \"SELECT * FROM employee WHERE username='$username' AND password='$password'\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "critical"
+        },
+        {
+            "file": "enquire.php",
+            "line": 20,
+            "type": "sql_var_inside_quotes",
+            "snippet": "$sql = \"INSERT INTO enquiries (name, email, contact) VALUES ('$name', '$email', '$contact')\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "high"
+        },
+        {
+            "file": "enquire.php",
+            "line": 20,
+            "type": "sql_quote_interpolation",
+            "snippet": "$sql = \"INSERT INTO enquiries (name, email, contact) VALUES ('$name', '$email', '$contact')\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "critical"
+        },
+        {
+            "file": "terminate.php",
+            "line": 36,
+            "type": "sql_var_inside_quotes",
+            "snippet": "$query = \"SELECT * FROM admin WHERE username='$username' AND password='$password'\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "high"
+        },
+        {
+            "file": "terminate.php",
+            "line": 36,
+            "type": "sql_quote_interpolation",
+            "snippet": "$query = \"SELECT * FROM admin WHERE username='$username' AND password='$password'\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "critical"
+        },
+        {
+            "file": "terminate.php",
+            "line": 39,
+            "type": "sql_var_inside_quotes",
+            "snippet": "$query = \"SELECT * FROM owner WHERE username='$username' AND password='$password'\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "high"
+        },
+        {
+            "file": "terminate.php",
+            "line": 39,
+            "type": "sql_quote_interpolation",
+            "snippet": "$query = \"SELECT * FROM owner WHERE username='$username' AND password='$password'\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "critical"
+        },
+        {
+            "file": "terminate.php",
+            "line": 42,
+            "type": "sql_var_inside_quotes",
+            "snippet": "$query = \"SELECT * FROM tenant WHERE username='$username' AND password='$password'\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "high"
+        },
+        {
+            "file": "terminate.php",
+            "line": 42,
+            "type": "sql_quote_interpolation",
+            "snippet": "$query = \"SELECT * FROM tenant WHERE username='$username' AND password='$password'\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "critical"
+        },
+        {
+            "file": "terminate.php",
+            "line": 45,
+            "type": "sql_var_inside_quotes",
+            "snippet": "$query = \"SELECT * FROM employee WHERE username='$username' AND password='$password'\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "high"
+        },
+        {
+            "file": "terminate.php",
+            "line": 45,
+            "type": "sql_quote_interpolation",
+            "snippet": "$query = \"SELECT * FROM employee WHERE username='$username' AND password='$password'\";",
+            "uses_prepare_elsewhere": false,
+            "priority": "critical"
+        }
+    ]
+}

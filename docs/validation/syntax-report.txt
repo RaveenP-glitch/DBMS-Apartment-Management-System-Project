@@ -1,0 +1,132 @@
+No syntax errors detected in ./Tenant/maintanencefee.php
+OK  ./Tenant/maintanencefee.php
+No syntax errors detected in ./Tenant/parkingslotallot.php
+OK  ./Tenant/parkingslotallot.php
+No syntax errors detected in ./Tenant/submit_request.php
+OK  ./Tenant/submit_request.php
+No syntax errors detected in ./Tenant/requestservice.php
+OK  ./Tenant/requestservice.php
+No syntax errors detected in ./Tenant/tenant_dashboard.php
+OK  ./Tenant/tenant_dashboard.php
+No syntax errors detected in ./Tenant/signup.php
+OK  ./Tenant/signup.php
+No syntax errors detected in ./Tenant/complaintraise.php
+OK  ./Tenant/complaintraise.php
+No syntax errors detected in ./Tenant/tenant_login.php
+OK  ./Tenant/tenant_login.php
+No syntax errors detected in ./Tenant/submit_maintenance_fee.php
+OK  ./Tenant/submit_maintenance_fee.php
+No syntax errors detected in ./Tenant/process_signup.php
+OK  ./Tenant/process_signup.php
+No syntax errors detected in ./Tenant/terminate.php
+OK  ./Tenant/terminate.php
+No syntax errors detected in ./Owner/feesrecieved.php
+OK  ./Owner/feesrecieved.php
+No syntax errors detected in ./Owner/owner_dashboard.php
+OK  ./Owner/owner_dashboard.php
+No syntax errors detected in ./Owner/owner_login.php
+OK  ./Owner/owner_login.php
+No syntax errors detected in ./Owner/viewempl.php
+OK  ./Owner/viewempl.php
+No syntax errors detected in ./Owner/createroom.php
+OK  ./Owner/createroom.php
+No syntax errors detected in ./Owner/viewcomplaints.php
+OK  ./Owner/viewcomplaints.php
+No syntax errors detected in ./Owner/roomdetails.php
+OK  ./Owner/roomdetails.php
+No syntax errors detected in ./Owner/complaintcount.php
+OK  ./Owner/complaintcount.php
+No syntax errors detected in ./Owner/createemployee.php
+OK  ./Owner/createemployee.php
+No syntax errors detected in ./Owner/terminate.php
+OK  ./Owner/terminate.php
+No syntax errors detected in ./Admin/manage_data.php
+OK  ./Admin/manage_data.php
+No syntax errors detected in ./Admin/allotparkingslot.php
+OK  ./Admin/allotparkingslot.php
+No syntax errors detected in ./Admin/fees.php
+OK  ./Admin/fees.php
+No syntax errors detected in ./Admin/createowner.php
+OK  ./Admin/createowner.php
+No syntax errors detected in ./Admin/export.php
+OK  ./Admin/export.php
+No syntax errors detected in ./Admin/admin_disp.php
+OK  ./Admin/admin_disp.php
+No syntax errors detected in ./Admin/admin_dashboard.php
+OK  ./Admin/admin_dashboard.php
+No syntax errors detected in ./Admin/get_employees.php
+OK  ./Admin/get_employees.php
+No syntax errors detected in ./Admin/statistics.php
+OK  ./Admin/statistics.php
+No syntax errors detected in ./Admin/parkingslot.php
+OK  ./Admin/parkingslot.php
+No syntax errors detected in ./Admin/deny.php
+OK  ./Admin/deny.php
+No syntax errors detected in ./Admin/complaints.php
+OK  ./Admin/complaints.php
+No syntax errors detected in ./Admin/count.php
+OK  ./Admin/count.php
+No syntax errors detected in ./Admin/delete.php
+OK  ./Admin/delete.php
+No syntax errors detected in ./Admin/exportenq.php
+OK  ./Admin/exportenq.php
+No syntax errors detected in ./Admin/admin_login.php
+OK  ./Admin/admin_login.php
+No syntax errors detected in ./Admin/viewenq.php
+OK  ./Admin/viewenq.php
+No syntax errors detected in ./config.php
+OK  ./config.php
+No syntax errors detected in ./scripts/refactor_admin_config.php
+OK  ./scripts/refactor_admin_config.php
+No syntax errors detected in ./scripts/generate_refactor_backlog.php
+OK  ./scripts/generate_refactor_backlog.php
+No syntax errors detected in ./scripts/prepare-release.php
+OK  ./scripts/prepare-release.php
+No syntax errors detected in ./scripts/strip_login_inline_css.php
+OK  ./scripts/strip_login_inline_css.php
+No syntax errors detected in ./scripts/security-scan-sql.php
+OK  ./scripts/security-scan-sql.php
+No syntax errors detected in ./Employee/deny_request.php
+OK  ./Employee/deny_request.php
+No syntax errors detected in ./Employee/fees.php
+OK  ./Employee/fees.php
+No syntax errors detected in ./Employee/sendemail.php
+OK  ./Employee/sendemail.php
+No syntax errors detected in ./Employee/export_data.php
+OK  ./Employee/export_data.php
+No syntax errors detected in ./Employee/approve_request.php
+OK  ./Employee/approve_request.php
+No syntax errors detected in ./Employee/services.php
+OK  ./Employee/services.php
+No syntax errors detected in ./Employee/totalcomplaint.php
+OK  ./Employee/totalcomplaint.php
+No syntax errors detected in ./Employee/employeelogin.php
+OK  ./Employee/employeelogin.php
+No syntax errors detected in ./Employee/export.php
+OK  ./Employee/export.php
+No syntax errors detected in ./Employee/delete_tenant.php
+OK  ./Employee/delete_tenant.php
+No syntax errors detected in ./Employee/parking.php
+OK  ./Employee/parking.php
+No syntax errors detected in ./Employee/edit_tenant.php
+OK  ./Employee/edit_tenant.php
+No syntax errors detected in ./Employee/viewcomplaints.php
+OK  ./Employee/viewcomplaints.php
+No syntax errors detected in ./Employee/empdashboard.php
+OK  ./Employee/empdashboard.php
+No syntax errors detected in ./Employee/createtenant.php
+OK  ./Employee/createtenant.php
+No syntax errors detected in ./Employee/viewrequest.php
+OK  ./Employee/viewrequest.php
+No syntax errors detected in ./Employee/viewtenant.php
+OK  ./Employee/viewtenant.php
+No syntax errors detected in ./Employee/terminate.php
+OK  ./Employee/terminate.php
+No syntax errors detected in ./enquire.php
+OK  ./enquire.php
+No syntax errors detected in ./terminate.php
+OK  ./terminate.php
+---
+Files checked: 64
+Failures: 0
+Generated: 2026-05-17T09:54:32Z
