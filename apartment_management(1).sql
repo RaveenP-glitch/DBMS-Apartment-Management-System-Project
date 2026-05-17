@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
 --
 
 INSERT INTO `admin` (`admin_id`, `username`, `password`, `email`, `phone_number`) VALUES
-(1, 'Abhyudith', '12345', 'abhyudith@gmail.com', '9742911000');
+(1, 'Raveen Panditha', '12345', 'raveenpanditha8@gmail.com', '9742911000');
 
 -- --------------------------------------------------------
 
@@ -176,7 +176,7 @@ INSERT INTO `enquiries` (`enquiry_id`, `name`, `email`, `contact`, `enquiry_date
 (1, 'Abhishek', 'abhis@gmail.com', '9873425353', '2024-02-27 04:03:43'),
 (14, 'Sanjay', 'sanjay@gmail.com', '9933321354', '2024-03-17 14:52:59'),
 (3, 'Sheldon', 'sheldoncoop@gmail.com', '1231231234', '2024-03-17 13:31:01'),
-(15, 'Abhyu', 'abhyudith@gmail.com', '97634454533', '2024-03-25 05:29:16');
+(15, 'Raveen', 'raveenpanditha8@gmail.com', '97634454533', '2024-03-25 05:29:16');
 
 -- --------------------------------------------------------
 
@@ -259,7 +259,7 @@ CREATE TABLE IF NOT EXISTS `owner` (
 
 INSERT INTO `owner` (`owner_id`, `first_name`, `last_name`, `email`, `phone_number`, `admin_id`, `username`, `password`) VALUES
 (6, 'Sandhya', 'Prithvi', 'sandhyaprithvi@gmail.com', '9739550101', 1, 'sandhya', '12345'),
-(8, 'zz', 'aaaaabhyu', 'abhyu@gmail.com', '87878787', 1, 'abhyu', '12345');
+(8, 'Raveen', 'Panditha', 'raveenpanditha8@gmail.com', '87878787', 1, 'raveen', '12345');
 
 -- --------------------------------------------------------
 

@@ -1,14 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "apartment_management";
-
-$conn = new mysqli($servername, $username, $password, $database);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+require_once __DIR__ . '/../config.php';
 
 $owner_query = "SELECT COUNT(*) AS total_owners FROM owner";
 $owner_result = $conn->query($owner_query);

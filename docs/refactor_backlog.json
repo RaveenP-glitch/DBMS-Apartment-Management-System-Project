@@ -1,0 +1,642 @@
+{
+    "generated_at": "2026-05-17T09:45:57+00:00",
+    "project": "DBMS-Apartment-Management-System-Project",
+    "items": [
+        {
+            "file": "Tenant/terminate.php",
+            "issue": "sql_interpolation_risk",
+            "priority": "critical"
+        },
+        {
+            "file": "Admin/allotparkingslot.php",
+            "issue": "sql_interpolation_risk",
+            "priority": "critical"
+        },
+        {
+            "file": "Admin/delete.php",
+            "issue": "sql_interpolation_risk",
+            "priority": "critical"
+        },
+        {
+            "file": "Employee/delete_tenant.php",
+            "issue": "sql_interpolation_risk",
+            "priority": "critical"
+        },
+        {
+            "file": "Employee/parking.php",
+            "issue": "sql_interpolation_risk",
+            "priority": "critical"
+        },
+        {
+            "file": "Employee/edit_tenant.php",
+            "issue": "sql_interpolation_risk",
+            "priority": "critical"
+        },
+        {
+            "file": "Employee/terminate.php",
+            "issue": "sql_interpolation_risk",
+            "priority": "critical"
+        },
+        {
+            "file": "terminate.php",
+            "issue": "sql_interpolation_risk",
+            "priority": "critical"
+        },
+        {
+            "file": "Tenant/maintanencefee.php",
+            "issue": "inline_mysqli_config",
+            "priority": "high",
+            "grep": "$servername"
+        },
+        {
+            "file": "Tenant/maintanencefee.php",
+            "issue": "mysqli_without_config",
+            "priority": "high"
+        },
+        {
+            "file": "Tenant/parkingslotallot.php",
+            "issue": "inline_mysqli_config",
+            "priority": "high",
+            "grep": "$servername"
+        },
+        {
+            "file": "Tenant/parkingslotallot.php",
+            "issue": "mysqli_without_config",
+            "priority": "high"
+        },
+        {
+            "file": "Tenant/submit_request.php",
+            "issue": "inline_mysqli_config",
+            "priority": "high",
+            "grep": "$servername"
+        },
+        {
+            "file": "Tenant/submit_request.php",
+            "issue": "mysqli_without_config",
+            "priority": "high"
+        },
+        {
+            "file": "Tenant/requestservice.php",
+            "issue": "inline_mysqli_config",
+            "priority": "high",
+            "grep": "$servername"
+        },
+        {
+            "file": "Tenant/requestservice.php",
+            "issue": "mysqli_without_config",
+            "priority": "high"
+        },
+        {
+            "file": "Tenant/signup.php",
+            "issue": "inline_mysqli_config",
+            "priority": "high",
+            "grep": "$servername"
+        },
+        {
+            "file": "Tenant/signup.php",
+            "issue": "mysqli_without_config",
+            "priority": "high"
+        },
+        {
+            "file": "Tenant/complaintraise.php",
+            "issue": "inline_mysqli_config",
+            "priority": "high",
+            "grep": "$servername"
+        },
+        {
+            "file": "Tenant/complaintraise.php",
+            "issue": "mysqli_without_config",
+            "priority": "high"
+        },
+        {
+            "file": "Tenant/tenant_login.php",
+            "issue": "inline_mysqli_config",
+            "priority": "high",
+            "grep": "$servername"
+        },
+        {
+            "file": "Tenant/tenant_login.php",
+            "issue": "mysqli_without_config",
+            "priority": "high"
+        },
+        {
+            "file": "Tenant/submit_maintenance_fee.php",
+            "issue": "inline_mysqli_config",
+            "priority": "high",
+            "grep": "$servername"
+        },
+        {
+            "file": "Tenant/submit_maintenance_fee.php",
+            "issue": "mysqli_without_config",
+            "priority": "high"
+        },
+        {
+            "file": "Tenant/process_signup.php",
+            "issue": "inline_mysqli_config",
+            "priority": "high",
+            "grep": "$servername"
+        },
+        {
+            "file": "Tenant/process_signup.php",
+            "issue": "mysqli_without_config",
+            "priority": "high"
+        },
+        {
+            "file": "Tenant/terminate.php",
+            "issue": "inline_mysqli_config",
+            "priority": "high",
+            "grep": "$servername"
+        },
+        {
+            "file": "Tenant/terminate.php",
+            "issue": "mysqli_without_config",
+            "priority": "high"
+        },
+        {
+            "file": "Employee/deny_request.php",
+            "issue": "inline_mysqli_config",
+            "priority": "high",
+            "grep": "$servername"
+        },
+        {
+            "file": "Employee/deny_request.php",
+            "issue": "mysqli_without_config",
+            "priority": "high"
+        },
+        {
+            "file": "Employee/fees.php",
+            "issue": "inline_mysqli_config",
+            "priority": "high",
+            "grep": "$servername"
+        },
+        {
+            "file": "Employee/fees.php",
+            "issue": "mysqli_without_config",
+            "priority": "high"
+        },
+        {
+            "file": "Employee/export_data.php",
+            "issue": "mysqli_without_config",
+            "priority": "high"
+        },
+        {
+            "file": "Employee/approve_request.php",
+            "issue": "inline_mysqli_config",
+            "priority": "high",
+            "grep": "$servername"
+        },
+        {
+            "file": "Employee/approve_request.php",
+            "issue": "mysqli_without_config",
+            "priority": "high"
+        },
+        {
+            "file": "Employee/totalcomplaint.php",
+            "issue": "inline_mysqli_config",
+            "priority": "high",
+            "grep": "$servername"
+        },
+        {
+            "file": "Employee/totalcomplaint.php",
+            "issue": "mysqli_without_config",
+            "priority": "high"
+        },
+        {
+            "file": "Employee/employeelogin.php",
+            "issue": "inline_mysqli_config",
+            "priority": "high",
+            "grep": "$servername"
+        },
+        {
+            "file": "Employee/employeelogin.php",
+            "issue": "mysqli_without_config",
+            "priority": "high"
+        },
+        {
+            "file": "Employee/export.php",
+            "issue": "inline_mysqli_config",
+            "priority": "high",
+            "grep": "$servername"
+        },
+        {
+            "file": "Employee/export.php",
+            "issue": "mysqli_without_config",
+            "priority": "high"
+        },
+        {
+            "file": "Employee/delete_tenant.php",
+            "issue": "inline_mysqli_config",
+            "priority": "high",
+            "grep": "$servername"
+        },
+        {
+            "file": "Employee/delete_tenant.php",
+            "issue": "mysqli_without_config",
+            "priority": "high"
+        },
+        {
+            "file": "Employee/parking.php",
+            "issue": "inline_mysqli_config",
+            "priority": "high",
+            "grep": "$servername"
+        },
+        {
+            "file": "Employee/parking.php",
+            "issue": "mysqli_without_config",
+            "priority": "high"
+        },
+        {
+            "file": "Employee/edit_tenant.php",
+            "issue": "inline_mysqli_config",
+            "priority": "high",
+            "grep": "$servername"
+        },
+        {
+            "file": "Employee/edit_tenant.php",
+            "issue": "mysqli_without_config",
+            "priority": "high"
+        },
+        {
+            "file": "Employee/viewcomplaints.php",
+            "issue": "inline_mysqli_config",
+            "priority": "high",
+            "grep": "$servername"
+        },
+        {
+            "file": "Employee/viewcomplaints.php",
+            "issue": "mysqli_without_config",
+            "priority": "high"
+        },
+        {
+            "file": "Employee/createtenant.php",
+            "issue": "inline_mysqli_config",
+            "priority": "high",
+            "grep": "$servername"
+        },
+        {
+            "file": "Employee/createtenant.php",
+            "issue": "mysqli_without_config",
+            "priority": "high"
+        },
+        {
+            "file": "Employee/viewrequest.php",
+            "issue": "inline_mysqli_config",
+            "priority": "high",
+            "grep": "$servername"
+        },
+        {
+            "file": "Employee/viewrequest.php",
+            "issue": "mysqli_without_config",
+            "priority": "high"
+        },
+        {
+            "file": "Employee/viewtenant.php",
+            "issue": "inline_mysqli_config",
+            "priority": "high",
+            "grep": "$servername"
+        },
+        {
+            "file": "Employee/viewtenant.php",
+            "issue": "mysqli_without_config",
+            "priority": "high"
+        },
+        {
+            "file": "Employee/terminate.php",
+            "issue": "inline_mysqli_config",
+            "priority": "high",
+            "grep": "$servername"
+        },
+        {
+            "file": "Employee/terminate.php",
+            "issue": "mysqli_without_config",
+            "priority": "high"
+        },
+        {
+            "file": "enquire.php",
+            "issue": "inline_mysqli_config",
+            "priority": "high",
+            "grep": "$servername"
+        },
+        {
+            "file": "enquire.php",
+            "issue": "mysqli_without_config",
+            "priority": "high"
+        },
+        {
+            "file": "terminate.php",
+            "issue": "inline_mysqli_config",
+            "priority": "high",
+            "grep": "$servername"
+        },
+        {
+            "file": "terminate.php",
+            "issue": "mysqli_without_config",
+            "priority": "high"
+        },
+        {
+            "file": "login.html",
+            "issue": "wrong_folder_case_in_links",
+            "priority": "high"
+        },
+        {
+            "file": "Tenant/maintanencefee.php",
+            "issue": "missing_output_escaping",
+            "priority": "medium"
+        },
+        {
+            "file": "Tenant/parkingslotallot.php",
+            "issue": "uses_superglobal_input",
+            "priority": "medium"
+        },
+        {
+            "file": "Tenant/submit_request.php",
+            "issue": "uses_superglobal_input",
+            "priority": "medium"
+        },
+        {
+            "file": "Tenant/requestservice.php",
+            "issue": "uses_superglobal_input",
+            "priority": "medium"
+        },
+        {
+            "file": "Tenant/signup.php",
+            "issue": "missing_output_escaping",
+            "priority": "medium"
+        },
+        {
+            "file": "Tenant/complaintraise.php",
+            "issue": "uses_superglobal_input",
+            "priority": "medium"
+        },
+        {
+            "file": "Tenant/tenant_login.php",
+            "issue": "uses_superglobal_input",
+            "priority": "medium"
+        },
+        {
+            "file": "Tenant/submit_maintenance_fee.php",
+            "issue": "uses_superglobal_input",
+            "priority": "medium"
+        },
+        {
+            "file": "Tenant/process_signup.php",
+            "issue": "uses_superglobal_input",
+            "priority": "medium"
+        },
+        {
+            "file": "Tenant/terminate.php",
+            "issue": "uses_superglobal_input",
+            "priority": "medium"
+        },
+        {
+            "file": "Admin/manage_data.php",
+            "issue": "missing_output_escaping",
+            "priority": "medium"
+        },
+        {
+            "file": "Admin/allotparkingslot.php",
+            "issue": "uses_superglobal_input",
+            "priority": "medium"
+        },
+        {
+            "file": "Admin/fees.php",
+            "issue": "missing_output_escaping",
+            "priority": "medium"
+        },
+        {
+            "file": "Admin/createowner.php",
+            "issue": "uses_superglobal_input",
+            "priority": "medium"
+        },
+        {
+            "file": "Admin/complaints.php",
+            "issue": "missing_output_escaping",
+            "priority": "medium"
+        },
+        {
+            "file": "Admin/count.php",
+            "issue": "missing_output_escaping",
+            "priority": "medium"
+        },
+        {
+            "file": "Admin/delete.php",
+            "issue": "uses_superglobal_input",
+            "priority": "medium"
+        },
+        {
+            "file": "Admin/admin_login.php",
+            "issue": "uses_superglobal_input",
+            "priority": "medium"
+        },
+        {
+            "file": "Admin/viewenq.php",
+            "issue": "missing_output_escaping",
+            "priority": "medium"
+        },
+        {
+            "file": "Employee/deny_request.php",
+            "issue": "uses_superglobal_input",
+            "priority": "medium"
+        },
+        {
+            "file": "Employee/fees.php",
+            "issue": "missing_output_escaping",
+            "priority": "medium"
+        },
+        {
+            "file": "Employee/sendemail.php",
+            "issue": "uses_superglobal_input",
+            "priority": "medium"
+        },
+        {
+            "file": "Employee/approve_request.php",
+            "issue": "uses_superglobal_input",
+            "priority": "medium"
+        },
+        {
+            "file": "Employee/employeelogin.php",
+            "issue": "uses_superglobal_input",
+            "priority": "medium"
+        },
+        {
+            "file": "Employee/delete_tenant.php",
+            "issue": "uses_superglobal_input",
+            "priority": "medium"
+        },
+        {
+            "file": "Employee/parking.php",
+            "issue": "uses_superglobal_input",
+            "priority": "medium"
+        },
+        {
+            "file": "Employee/parking.php",
+            "issue": "missing_output_escaping",
+            "priority": "medium"
+        },
+        {
+            "file": "Employee/edit_tenant.php",
+            "issue": "uses_superglobal_input",
+            "priority": "medium"
+        },
+        {
+            "file": "Employee/viewcomplaints.php",
+            "issue": "missing_output_escaping",
+            "priority": "medium"
+        },
+        {
+            "file": "Employee/createtenant.php",
+            "issue": "uses_superglobal_input",
+            "priority": "medium"
+        },
+        {
+            "file": "Employee/viewrequest.php",
+            "issue": "missing_output_escaping",
+            "priority": "medium"
+        },
+        {
+            "file": "Employee/viewtenant.php",
+            "issue": "uses_superglobal_input",
+            "priority": "medium"
+        },
+        {
+            "file": "Employee/terminate.php",
+            "issue": "uses_superglobal_input",
+            "priority": "medium"
+        },
+        {
+            "file": "enquire.php",
+            "issue": "uses_superglobal_input",
+            "priority": "medium"
+        },
+        {
+            "file": "terminate.php",
+            "issue": "uses_superglobal_input",
+            "priority": "medium"
+        },
+        {
+            "file": "Owner/complaintcount.php",
+            "issue": "legacy_owner_role",
+            "priority": "medium",
+            "phase": "owner_deprecation"
+        },
+        {
+            "file": "Owner/createemployee.php",
+            "issue": "legacy_owner_role",
+            "priority": "medium",
+            "phase": "owner_deprecation"
+        },
+        {
+            "file": "Owner/createroom.php",
+            "issue": "legacy_owner_role",
+            "priority": "medium",
+            "phase": "owner_deprecation"
+        },
+        {
+            "file": "Owner/feesrecieved.php",
+            "issue": "legacy_owner_role",
+            "priority": "medium",
+            "phase": "owner_deprecation"
+        },
+        {
+            "file": "Owner/owner_dashboard.php",
+            "issue": "legacy_owner_role",
+            "priority": "medium",
+            "phase": "owner_deprecation"
+        },
+        {
+            "file": "Owner/owner_login.php",
+            "issue": "legacy_owner_role",
+            "priority": "medium",
+            "phase": "owner_deprecation"
+        },
+        {
+            "file": "Owner/roomdetails.php",
+            "issue": "legacy_owner_role",
+            "priority": "medium",
+            "phase": "owner_deprecation"
+        },
+        {
+            "file": "Owner/terminate.php",
+            "issue": "legacy_owner_role",
+            "priority": "medium",
+            "phase": "owner_deprecation"
+        },
+        {
+            "file": "Owner/viewcomplaints.php",
+            "issue": "legacy_owner_role",
+            "priority": "medium",
+            "phase": "owner_deprecation"
+        },
+        {
+            "file": "Owner/viewempl.php",
+            "issue": "legacy_owner_role",
+            "priority": "medium",
+            "phase": "owner_deprecation"
+        },
+        {
+            "file": "Tenant/terminate.php",
+            "issue": "select_star",
+            "priority": "low"
+        },
+        {
+            "file": "Admin/manage_data.php",
+            "issue": "select_star",
+            "priority": "low"
+        },
+        {
+            "file": "Admin/export.php",
+            "issue": "select_star",
+            "priority": "low"
+        },
+        {
+            "file": "Admin/admin_disp.php",
+            "issue": "select_star",
+            "priority": "low"
+        },
+        {
+            "file": "Admin/get_employees.php",
+            "issue": "select_star",
+            "priority": "low"
+        },
+        {
+            "file": "Admin/exportenq.php",
+            "issue": "select_star",
+            "priority": "low"
+        },
+        {
+            "file": "Admin/viewenq.php",
+            "issue": "select_star",
+            "priority": "low"
+        },
+        {
+            "file": "Employee/export.php",
+            "issue": "select_star",
+            "priority": "low"
+        },
+        {
+            "file": "Employee/edit_tenant.php",
+            "issue": "select_star",
+            "priority": "low"
+        },
+        {
+            "file": "Employee/viewtenant.php",
+            "issue": "select_star",
+            "priority": "low"
+        },
+        {
+            "file": "Employee/terminate.php",
+            "issue": "select_star",
+            "priority": "low"
+        },
+        {
+            "file": "terminate.php",
+            "issue": "select_star",
+            "priority": "low"
+        },
+        {
+            "file": "Employee/style copy.css",
+            "issue": "duplicate_css_copy",
+            "priority": "low"
+        }
+    ]
+}

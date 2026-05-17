@@ -86,7 +86,7 @@ function sanitize_input($data) {
         <select name="tenant_id" id="tenant_id" required>
             <?php
             // Database connection parameters
-            $servername = "localhost";
+            $servername = "127.0.0.1";
             $username = "root";
             $password = "";
             $database = "apartment_management";
@@ -135,7 +135,7 @@ function sanitize_input($data) {
     // Check if form is submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Database connection parameters
-        $servername = "localhost";
+        $servername = "127.0.0.1";
         $username = "root";
         $password = "";
         $database = "apartment_management";

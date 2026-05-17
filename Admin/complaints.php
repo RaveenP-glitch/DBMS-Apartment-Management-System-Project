@@ -1,14 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "apartment_management";
-
-$conn = new mysqli($servername, $username, $password, $database);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+require_once __DIR__ . '/../config.php';
 
 $complaint_query = "SELECT c.complaint_id, c.description, t.first_name AS tenant_first_name, t.last_name AS tenant_last_name, o.first_name AS owner_first_name, o.last_name AS owner_last_name, e.first_name AS employee_first_name, e.last_name AS employee_last_name
                     FROM complaint c

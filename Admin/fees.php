@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/../config.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,21 +80,6 @@
                 <th>Total Fees Paid</th>
             </tr>
             <?php
-            // Database connection parameters
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $database = "apartment_management";
-
-            // Create connection
-            $conn = new mysqli($servername, $username, $password, $database);
-
-            // Check connection
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            }
-
-            // Query to retrieve fees details including service name and grouped by tenant name
             $query = "SELECT CONCAT(tenant.first_name, ' ', tenant.last_name) AS tenant_name, services.service_name, 
                       SUM(maintenance_payment.amount_paid) AS total_fees_paid
                       FROM tenant
@@ -101,7 +87,6 @@
                       LEFT JOIN services ON maintenance_payment.service_id = services.service_id
                       GROUP BY tenant_name, service_name";
 
-            // Execute query
             $result = $conn->query($query);
 
             // Check if any data found

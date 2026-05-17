@@ -71,7 +71,7 @@
             <select id="building_name" name="building_name" required>
                 <?php
                 // Database connection parameters
-                $servername = "localhost";
+                $servername = "127.0.0.1";
                 $username = "root";
                 $password = "";
                 $database = "apartment_management";
@@ -107,7 +107,7 @@
             <select id="owner_name" name="owner_name" required>
                 <?php
                 // Database connection parameters
-                $servername = "localhost";
+                $servername = "127.0.0.1";
                 $username = "root";
                 $password = "";
                 $database = "apartment_management";

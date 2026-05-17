@@ -1,0 +1,57 @@
+---
+description: V3 semi-automated refactor rules for PHP Apartment Management System
+globs: **/*.php
+alwaysApply: false
+---
+
+# V3 refactor — PHP rules (Phase 0–1)
+
+Read `docs/V3_PHASE0.md` for frozen scope and `docs/V3_CHANGES.md` for what is already done. **Active phase: Phase 1 (security + config)** unless the user specifies otherwise. After completing work, append a dated entry to `docs/V3_CHANGES.md`.
+
+## Database connection
+
+- Remove inline `$servername`, `$username`, `$password`, `$database`, and `new mysqli(...)` blocks.
+- Include shared config only:
+
+```php
+require_once __DIR__ . '/../config.php';  // from Admin/, Employee/, Tenant/, Owner/
+require_once __DIR__ . '/config.php';      // from repo root (enquire.php, terminate.php)
+```
+
+- Do not close `$conn` in every file if the including script still needs it; prefer one connection per request via `config.php`.
+
+## SQL and input
+
+- Use **prepared statements** for any query that includes user input.
+- Never interpolate `$_POST`, `$_GET`, or `$_SESSION` values into SQL strings.
+- Use `password_verify()` / `password_hash()` when changing auth (coordinate DB migration if hashes are introduced).
+
+## Sessions and auth
+
+- Call `session_start()` at the top of protected pages.
+- Redirect unauthenticated users to the correct `*_login.php` for that role.
+- Do not weaken or remove existing login checks without explicit instruction.
+
+## Output and files
+
+- Echo user/DB data through `htmlspecialchars($value, ENT_QUOTES, 'UTF-8')`.
+- Keep folder names: `Admin`, `Employee`, `Tenant` (case-sensitive).
+- Do not rename public URLs or change form field names unless asked (breaks existing HTML/JS).
+
+## Scope boundaries
+
+- **Phase 1:** config centralization, prepared statements, sessions, escaping — no UI redesign, no framework.
+- **Owner/** (`Owner/*.php`): legacy; do not expand or wire into `login.html` until Phase 2.
+- Do not change business rules (fees, approvals, deletes, exports column layout) without explicit approval.
+- Do not commit secrets; use `config.php` locally or document variables in `.env.example` only.
+
+## Style
+
+- Match existing procedural PHP + inline HTML in each file.
+- Prefer small, reviewable diffs over whole-file rewrites.
+- After edits, ensure `php -l path/to/file.php` passes.
+
+## When unsure
+
+- Ask before merging `complaint` and `complaints` tables or removing `Owner/`.
+- Ask before switching to Composer, Laravel, or Slim.

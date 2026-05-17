@@ -1,6 +1,6 @@
 <?php
 // Database connection parameters
-$servername = "localhost";
+$servername = "127.0.0.1";
 $username = "root";
 $password = ""; // Replace with your actual password
 $database = "apartment_management";

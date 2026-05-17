@@ -12,6 +12,17 @@ This is an Apartment Management System built using PHP, MySQL, HTML, CSS, and Ja
 - Tenant can see the alloted parking slot, pay maintenance fee, raise complaints, and see his/her details.
 - Employee can see all the complaints.
 
+## V3 refactoring (semi-automated)
+
+Phase 0 planning (scope, baseline checklist, PHP inventory, AI rules) lives in [`docs/V3_PHASE0.md`](docs/V3_PHASE0.md). **Living changelog:** [`docs/V3_CHANGES.md`](docs/V3_CHANGES.md). Phase 1 work should use branch `refactor/v3-security`.
+
+### Automated inventory & batch refactors
+
+- Run `php scripts/generate_refactor_backlog.php` → [`docs/refactor_backlog.json`](docs/refactor_backlog.json)
+- **Admin/** uses shared [`config.php`](config.php) and prepared statements where input is used
+- Shared login styles: [`assets/css/login.css`](assets/css/login.css)
+- **Owner/** deprecated — redirects documented in [`docs/OWNER_DEPRECATION.md`](docs/OWNER_DEPRECATION.md)
+
 ## Installation
 
 1. Clone the repository: `https://github.com/Radom12/DBMS-Apartment-Management-System-Project`

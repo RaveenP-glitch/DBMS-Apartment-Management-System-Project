@@ -1,32 +1,30 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "apartment_management";
+require_once __DIR__ . '/../config.php';
 
-$conn = new mysqli($servername, $username, $password, $database);
+$type = $_GET["type"] ?? '';
+$id = isset($_GET["id"]) ? (int) $_GET["id"] : 0;
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if ($id <= 0) {
+    die("Invalid id");
 }
-
-$type = $_GET["type"];
-$id = $_GET["id"];
 
 if ($type === "employee") {
-    $delete_query = "DELETE FROM employee WHERE employee_id = $id";
+    $stmt = $conn->prepare("DELETE FROM employee WHERE employee_id = ?");
 } elseif ($type === "tenant") {
-    $delete_query = "DELETE FROM tenant WHERE tenant_id = $id";
+    $stmt = $conn->prepare("DELETE FROM tenant WHERE tenant_id = ?");
 } elseif ($type === "owner") {
-    $delete_query = "DELETE FROM owner WHERE owner_id = $id";
+    $stmt = $conn->prepare("DELETE FROM owner WHERE owner_id = ?");
+} else {
+    die("Invalid type");
 }
 
-if ($conn->query($delete_query) === TRUE) {
+$stmt->bind_param("i", $id);
+
+if ($stmt->execute()) {
+    $stmt->close();
     header("Location: manage_data.php");
     exit();
-} else {
-    echo "Error deleting record: " . $conn->error;
 }
 
-$conn->close();
-?>
+echo "Error deleting record: " . $stmt->error;
+$stmt->close();

@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/../config.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,40 +77,24 @@
       <th>Status</th>
     </tr>
     <?php
-      // Database connection details (replace with your actual credentials)
-      $servername = "localhost";
-      $username = "root";
-      $password = "";
-      $database = "apartment_management";
-
-      // Create connection
-      $conn = new mysqli($servername, $username, $password, $database);
-
-      // Check connection
-      if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-      }
-
-      // Generate parking slots
       $total_slots = 20;
+      $slotStmt = $conn->prepare("SELECT owner_id FROM parking_slot WHERE slot_number = ?");
 
       for ($i = 1; $i <= $total_slots; $i++) {
-        // Check if the slot is allocated
-        $sql = "SELECT owner_id FROM parking_slot WHERE slot_number = $i";
-        $result = $conn->query($sql);
+        $slotStmt->bind_param("i", $i);
+        $slotStmt->execute();
+        $result = $slotStmt->get_result();
 
         $status_class = ($result->num_rows > 0) ? 'allocated' : 'available';
         $status_text = ($result->num_rows > 0) ? 'Allocated' : 'Available';
 
-        // Output row with slot information and status
         echo "<tr>";
-        echo "<td>$i</td>";
-        echo "<td class='$status_class' onclick='openPopup($i)'>$status_text</td>";
+        echo "<td>" . (int) $i . "</td>";
+        echo "<td class='" . htmlspecialchars($status_class, ENT_QUOTES, 'UTF-8') . "' onclick='openPopup(" . (int) $i . ")'>" . htmlspecialchars($status_text, ENT_QUOTES, 'UTF-8') . "</td>";
         echo "</tr>";
       }
 
-      // Close database connection
-      $conn->close();
+      $slotStmt->close();
     ?>
   </table>
 

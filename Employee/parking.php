@@ -50,7 +50,7 @@
                 <!-- Populate dropdown with employee names -->
                 <?php
                 // Database connection parameters
-                $servername = "localhost";
+                $servername = "127.0.0.1";
                 $username = "root";
                 $password = "";
                 $database = "apartment_management";

@@ -2,7 +2,7 @@
 // Start the session
 session_start();
 
-$servername = "localhost";
+$servername = "127.0.0.1";
 $username = "root";
 $password = "";
 $database = "apartment_management";
